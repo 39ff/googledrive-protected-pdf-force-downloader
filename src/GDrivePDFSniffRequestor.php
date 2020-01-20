@@ -61,7 +61,7 @@ class GDrivePDFSniffRequestor{
         return $c;
     }
 
-    public function download(Signature $signature,Meta $meta, $page = 1) : RequestInterface{
+    public function download(Signature $signature,Meta $meta, $page = 0) : RequestInterface{
         if($meta->getPages() < $page){
             throw new GDrivePDFSniffRequestorException("Maximum Page < Input Pages is wrong params.");
         }
